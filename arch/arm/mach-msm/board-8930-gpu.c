@@ -165,7 +165,8 @@ void __init msm8930_init_gpu(void)
 
 	/* Set the turbo speed for the AA and AB respectively */
 
-	if (cpu_is_msm8930aa())
+	//if (cpu_is_msm8930aa())
+               if (1)
 		kgsl_3d0_pdata.pwrlevel[0].gpu_freq = 450000000;
 	else if (cpu_is_msm8930ab()) {
 		kgsl_3d0_pdata.pwrlevel[0].gpu_freq = 500000000;
