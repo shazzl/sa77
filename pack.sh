@@ -17,7 +17,7 @@ rm -rf meta/system/lib/modules/*
 cd meta/system/lib/modules
 mkdir prima
 cd ../../../../
-cp prima/wlan.ko meta/system/lib/modules/prima/prima_wlan.ko
+#cp prima/wlan.ko meta/system/lib/modules/prima/prima_wlan.ko
 find /home/rachit/android/taoshan/kernel -name '*ko' -exec cp '{}' meta/system/lib/modules \;
     mv meta/system/lib/modules/cfg80211.ko meta/system/lib/modules/prima/cfg80211.ko
     mv meta/system/lib/modules/cifs.ko Modules/cifs.ko
@@ -28,7 +28,7 @@ find /home/rachit/android/taoshan/kernel -name '*ko' -exec cp '{}' meta/system/l
     mv meta/system/lib/modules/tun.ko Modules/tun.ko
     mv meta/system/lib/modules/exfat_core.ko Modules/exfat_core.ko
     mv meta/system/lib/modules/exfat_fs.ko Modules/exfat_fs.ko
-   #mv meta/system/lib/modules/wlan.ko meta/system/lib/modules/prima/prima_wlan.ko
+   mv meta/system/lib/modules/wlan.ko meta/system/lib/modules/prima/prima_wlan.ko
 
 # Make Ramdisks
 echo " Creating ramdisk \n "

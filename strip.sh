@@ -1,6 +1,8 @@
+
 PATH=/home/rachit/android/toolchains/google/bin:$PATH
 
 export PATH
-
+cd drivers/staging/prima
 #Build kernel
-ARCH=arm CROSS_COMPILE=arm-linux-androideabi- make distclean
+arm-linux-androideabi-strip --strip-unneeded wlan.ko
+
