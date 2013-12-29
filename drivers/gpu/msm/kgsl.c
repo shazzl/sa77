@@ -597,7 +597,7 @@ kgsl_get_process_private(struct kgsl_device_private *cur_dev_priv)
 	list_add(&private->list, &kgsl_driver.process_list);
 
 	kgsl_process_init_sysfs(private);
-	kgsl_process_init_debugfs(private);
+	//kgsl_process_init_debugfs(private);
 
 out:
 	mutex_unlock(&kgsl_driver.process_mutex);
@@ -2279,7 +2279,7 @@ int kgsl_device_platform_probe(struct kgsl_device *device)
 		return status;
 
 	/* Initialize logging first, so that failures below actually print. */
-	kgsl_device_debugfs_init(device);
+	//kgsl_device_debugfs_init(device);
 
 	status = kgsl_pwrctrl_init(device);
 	if (status)
@@ -2511,7 +2511,7 @@ static void kgsl_core_exit(void)
 
 	kgsl_drm_exit();
 	kgsl_cffdump_destroy();
-	kgsl_core_debugfs_close();
+	//kgsl_core_debugfs_close();
 
 	/*
 	 * We call kgsl_sharedmem_uninit_sysfs() and device_unregister()
@@ -2583,7 +2583,7 @@ static int __init kgsl_core_init(void)
 		kobject_create_and_add("proc",
 				       &kgsl_driver.virtdev.kobj);
 
-	kgsl_core_debugfs_init();
+	//kgsl_core_debugfs_init();
 
 	kgsl_sharedmem_init_sysfs();
 	kgsl_cffdump_init();

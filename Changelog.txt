@@ -184,6 +184,10 @@ Please note that insmoding modules may affect device performance and battery lif
 
 >----Version 2.5----
 * Bump to 15.3.A.1.12
+* Wlan driver updated to v3.2.1.11h
 * Remove intelli_plug and set mpdecision as default
+* Remove intellidemand and set ondemand as default
 * Max Cpu clk 1188MHz and Min cpu clk 384MHz
 * All new bootlogo
+* Removed debugging s**ts
+* Optimized for battery and performance

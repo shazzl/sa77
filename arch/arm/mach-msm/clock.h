@@ -14,7 +14,7 @@
 
 #ifndef __ARCH_ARM_MACH_MSM_CLOCK_H
 #define __ARCH_ARM_MACH_MSM_CLOCK_H
-
+#undef CONFIG_DEBUG_FS
 #include <linux/clkdev.h>
 
 /**
@@ -51,7 +51,7 @@ extern struct clock_init_data msm8974_rumi_clock_init_data;
 
 int msm_clock_init(struct clock_init_data *data);
 int find_vdd_level(struct clk *clk, unsigned long rate);
-
+/*
 #ifdef CONFIG_DEBUG_FS
 int clock_debug_init(void);
 int clock_debug_register(struct clk_lookup *t, size_t s);
@@ -63,6 +63,6 @@ static inline int clock_debug_register(struct clk_lookup *t, size_t s)
 	return 0;
 }
 static inline void clock_debug_print_enabled(void) { return; }
-#endif
+#endif*/
 
 #endif

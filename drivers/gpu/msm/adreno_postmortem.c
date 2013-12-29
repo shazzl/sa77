@@ -845,7 +845,7 @@ int adreno_dump(struct kgsl_device *device, int manual)
 		cp_rb_base, cp_rb_rptr, cp_rb_wptr, read_idx);
 	adreno_dump_rb(device, rb_copy, num_item<<2, read_idx, rb_count);
 
-	if (device->pm_ib_enabled) {
+	/*if (device->pm_ib_enabled) {
 		for (read_idx = NUM_DWORDS_OF_RINGBUFFER_HISTORY;
 			read_idx >= 0; --read_idx) {
 			uint32_t this_cmd = rb_copy[read_idx];
@@ -875,7 +875,7 @@ int adreno_dump(struct kgsl_device *device, int manual)
 		}
 	}
 
-	/* Dump the registers if the user asked for it */
+
 	if (device->pm_regs_enabled) {
 		if (adreno_is_a20x(adreno_dev))
 			adreno_dump_regs(device, a200_registers,
@@ -895,7 +895,7 @@ int adreno_dump(struct kgsl_device *device, int manual)
 					a330_registers_count);
 		}
 	}
-
+*/
 error_vfree:
 	vfree(rb_copy);
 end:

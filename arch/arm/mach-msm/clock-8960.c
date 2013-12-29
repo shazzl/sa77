@@ -10,6 +10,9 @@
  * GNU General Public License for more details.
  */
 
+#undef CONFIG_DEBUG_FS
+
+#undef CONFIG_DEBUG_FS
 #include <linux/kernel.h>
 #include <linux/init.h>
 #include <linux/err.h>
@@ -5039,13 +5042,13 @@ static struct measure_sel measure_mux[] = {
 	{ TEST_LPA(0x14), &pcm_clk.c },
 	{ TEST_LPA(0x1D), &audio_slimbus_clk.c },
 
-	{ TEST_LPA_HS(0x00), &q6_func_clk },
+	/*{ TEST_LPA_HS(0x00), &q6_func_clk },
 
 	{ TEST_CPUL2(0x2), &l2_m_clk },
 	{ TEST_CPUL2(0x0), &krait0_m_clk },
 	{ TEST_CPUL2(0x1), &krait1_m_clk },
 	{ TEST_CPUL2(0x4), &krait2_m_clk },
-	{ TEST_CPUL2(0x5), &krait3_m_clk },
+	{ TEST_CPUL2(0x5), &krait3_m_clk },*/
 };
 
 static struct measure_sel *find_measure_sel(struct clk *c)
@@ -5593,12 +5596,12 @@ static struct clk_lookup msm_clocks_8064[] = {
 
 	CLK_LOOKUP("reset1_clk",	dsi1_reset_clk.c, "footswitch-8x60.4"),
 	CLK_LOOKUP("reset2_clk",	dsi2_reset_clk.c, "footswitch-8x60.4"),
-
+/*
 	CLK_LOOKUP("l2_mclk",		l2_m_clk,     ""),
 	CLK_LOOKUP("krait0_mclk",	krait0_m_clk, ""),
 	CLK_LOOKUP("krait1_mclk",	krait1_m_clk, ""),
 	CLK_LOOKUP("krait2_mclk",	krait2_m_clk, ""),
-	CLK_LOOKUP("krait3_mclk",	krait3_m_clk, ""),
+	CLK_LOOKUP("krait3_mclk",	krait3_m_clk, ""),*/
 	CLK_LOOKUP("rot_iommu_clk",	rot_axi_clk.c,	"msm_rotator.0"),
 	CLK_LOOKUP("mdp_iommu_clk", mdp_axi_clk.c,	"msm_rotator.0"),
 	CLK_LOOKUP("vcodec_iommu0_clk", vcodec_axi_a_clk.c, "msm_rotator.0"),
@@ -5927,12 +5930,12 @@ static struct clk_lookup msm_clocks_8960_common[] __initdata = {
 	CLK_LOOKUP("reset1_clk",	dsi1_reset_clk.c, "footswitch-8x60.4"),
 	CLK_LOOKUP("reset2_clk",	dsi2_reset_clk.c, "footswitch-8x60.4"),
 
-	CLK_LOOKUP("l2_mclk",		l2_m_clk,     ""),
+	/*CLK_LOOKUP("l2_mclk",		l2_m_clk,     ""),
 	CLK_LOOKUP("krait0_mclk",	krait0_m_clk, ""),
 	CLK_LOOKUP("krait1_mclk",	krait1_m_clk, ""),
 	CLK_LOOKUP("q6sw_clk",		q6sw_clk,     ""),
 	CLK_LOOKUP("q6fw_clk",		q6fw_clk,     ""),
-	CLK_LOOKUP("q6_func_clk",	q6_func_clk,  ""),
+	CLK_LOOKUP("q6_func_clk",	q6_func_clk,  ""),*/
 	CLK_LOOKUP("rot_iommu_clk",	rot_axi_clk.c,	"msm_rotator.0"),
 	CLK_LOOKUP("mdp_iommu_clk", mdp_axi_clk.c,	"msm_rotator.0"),
 	CLK_LOOKUP("vcodec_iommu0_clk", vcodec_axi_a_clk.c, "msm_rotator.0"),
@@ -6295,13 +6298,13 @@ static struct clk_lookup msm_clocks_8930[] = {  //: this one
 	CLK_LOOKUP("bus_clk",		afab_acpu_a_clk.c, ""),
 
 	CLK_LOOKUP("reset1_clk",	dsi1_reset_clk.c, "footswitch-8x60.4"),
-
+/*
 	CLK_LOOKUP("l2_mclk",		l2_m_clk,     ""),
 	CLK_LOOKUP("krait0_mclk",	krait0_m_clk, ""),
 	CLK_LOOKUP("krait1_mclk",	krait1_m_clk, ""),
 	CLK_LOOKUP("q6sw_clk",		q6sw_clk,     ""),
 	CLK_LOOKUP("q6fw_clk",		q6fw_clk,     ""),
-	CLK_LOOKUP("q6_func_clk",	q6_func_clk,  ""),
+	CLK_LOOKUP("q6_func_clk",	q6_func_clk,  ""),*/
 
 	CLK_LOOKUP("rot_iommu_clk",	rot_axi_clk.c,	"msm_rotator.0"),
 	CLK_LOOKUP("mdp_iommu_clk", mdp_axi_clk.c,	"msm_rotator.0"),

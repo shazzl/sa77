@@ -526,7 +526,7 @@ void *ipc_log_context_create(int max_num_pages,
 	ctxt->write_avail = max_num_pages * (PAGE_SIZE -
 					sizeof(struct ipc_log_page_header));
 
-	create_ctx_debugfs(ctxt, mod_name);
+	//create_ctx_debugfs(ctxt, mod_name);
 
 	spin_lock_irqsave(&ipc_log_context_list_lock, flags);
 	list_add_tail(&ctxt->list, &ipc_log_context_list);
@@ -546,7 +546,7 @@ EXPORT_SYMBOL(ipc_log_context_create);
 
 static int __init ipc_logging_init(void)
 {
-	check_and_create_debugfs();
+	//check_and_create_debugfs();
 	return 0;
 }
 
