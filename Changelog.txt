@@ -191,3 +191,11 @@ Please note that insmoding modules may affect device performance and battery lif
 * All new bootlogo
 * Removed debugging s**ts
 * Optimized for battery and performance
+
+>----Version 2.6----
+* Disable ARCH_UNWIND and DEBUG_KERNEL
+* All modules stripped-debug
+* Disabled powersave governor
+* Performance enhancements
+* Battery enhancements
+* More available RAM memory
