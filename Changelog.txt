@@ -199,3 +199,4 @@ Please note that insmoding modules may affect device performance and battery lif
 * Performance enhancements
 * Battery enhancements
 * More available RAM memory
+* Revert to good ol' sony logo
