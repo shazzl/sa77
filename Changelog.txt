@@ -200,3 +200,12 @@ Please note that insmoding modules may affect device performance and battery lif
 * Battery enhancements
 * More available RAM memory
 * Revert to good ol' sony logo
+
+>----Version 3.0----
+* Introduce kernel level hotplug driver- intelli_plug
+* Overclockable upto 1.4 GHz
+* intelli_plug set as default
+* Default boot freq set to 1188 MHz
+* Disable CC_OPTIMIZE_FOR_SIZE
+* mm: Dynamic management of dirty page writebacks
+* random.c : read/write_wakeup_threshhold tweaks
